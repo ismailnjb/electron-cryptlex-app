@@ -20,7 +20,10 @@ jobs:
       - run: npm install
 
       # Build Vite + Electron (creates dist + dist-electron)
-      - run: npm run build
+      - name: Build and Package
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run build
 
       # Package without publishing
       - run: npx electron-builder --publish=never
