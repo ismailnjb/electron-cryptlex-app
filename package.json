@@ -30,9 +30,10 @@
     "vite-plugin-electron-renderer": "^0.14.5"
   },
   "build": {
-  "win": {
-    "signAndEditExecutable": false
-  }
-},
+    "win": {
+      "signAndEditExecutable": false,
+      "target": "portable"
+    }
+  },
   "main": "dist-electron/main.js"
 }
