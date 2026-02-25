@@ -18,23 +18,16 @@
     "artifactName": "${productName}-Mac-${version}-Installer.${ext}"
   },
   "win": {
-     "signAndEditExecutable": false,
+    "signAndEditExecutable": false,
     "target": [
       {
-        "target": "nsis",
+        "target": "portable",
         "arch": [
           "x64"
         ]
       }
     ],
-    "artifactName": "${productName}-Windows-${version}-Setup.${ext}"
-  },
-  "nsis": {
-    "oneClick": false,
-    "perMachine": false,
-    "allowToChangeInstallationDirectory": true,
-    "deleteAppDataOnUninstall": false,
-    "include": "installer/installer.nsh"
+    "artifactName": "${productName}-Windows-${version}.${ext}"
   },
   "linux": {
     "target": [
