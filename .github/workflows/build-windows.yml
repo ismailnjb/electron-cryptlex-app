@@ -28,6 +28,9 @@ jobs:
       # Package without publishing
       - run: npx electron-builder --publish=never
 
+      - name: List release output
+        run: Get-ChildItem -Recurse release/
+
       - uses: actions/upload-artifact@v4
         with:
           name: electron-windows-build
